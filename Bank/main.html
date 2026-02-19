@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank Dashboard</title>
+
+  <!-- DaisyUI -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/daisyui@5"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <!-- Tailwind Browser CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- Navbar -->
+  <div class="navbar bg-white shadow-md px-6">
+    <div class="flex-1">
+      <h1 class="text-xl font-bold">Digital Bank Dashboard</h1>
+    </div>
+    <div>
+      <a href="index.html" class="btn btn-sm btn-error">Logout</a>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="max-w-6xl mx-auto p-6">
+
+    <!-- Balance Card -->
+    <div class="card bg-primary text-primary-content shadow-xl mb-8">
+      <div class="card-body text-center">
+        <h2 class="text-xl">Current Balance</h2>
+        <h1 class="text-4xl font-bold">৳ <span id="balance">5000</span></h1>
+      </div>
+    </div>
+
+    <!-- Service Cards -->
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Add Money -->
+      <div class="card bg-white shadow-lg">
+        <div class="card-body">
+          <h2 class="card-title">Add Money</h2>
+
+          <!-- Bank Selection -->
+          <select id="add-bank" class="select select-bordered w-full">
+            <option disabled selected>Select Method</option>
+            <option id="bkash">bKash</option>
+            <option id="rocket">Rocket</option>
+            <option id="nagad">Nagad</option>
+          </select>
+
+          <input
+            type="number"
+            id="add-amount"
+            placeholder="Enter amount"
+            class="input input-bordered w-full mt-3"
+          />
+
+          <button id="add-btn" class="btn btn-success mt-3">
+            Add Money
+          </button>
+        </div>
+      </div>
+
+      <!-- Withdraw -->
+      <div class="card bg-white shadow-lg">
+        <div class="card-body">
+          <h2 class="card-title">Withdraw</h2>
+
+          <select id="withdraw-bank" class="select select-bordered w-full">
+            <option disabled selected>Select Method</option>
+            <option>bKash</option>
+            <option>Rocket</option>
+            <option>Nagad</option>
+          </select>
+
+          <input
+            type="number"
+            id="withdraw-amount"
+            placeholder="Enter amount"
+            class="input input-bordered w-full mt-3"
+          />
+
+          <button id="withdraw-btn" class="btn btn-warning mt-3">
+            Withdraw
+          </button>
+        </div>
+      </div>
+
+      <!-- Transaction Info -->
+      <div class="card bg-white shadow-lg">
+        <div class="card-body">
+          <h2 class="card-title" id="card-title">Account Info</h2>
+          <p>Account Name: Monirul Islam</p>
+          <p>Account Number: 01742958888</p>
+          <p>Status: Active</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<script src="JS/main.js"></script>
+
+
+</body>
+</html>
