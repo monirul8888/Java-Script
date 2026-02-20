@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portal</title>
+
+    <!-- DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind Browser CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+
+    <!-- Card Container -->
+    <div class="card w-full max-w-md bg-white shadow-2xl">
+
+      <div class="card-body p-8">
+
+        <!-- Title -->
+        <h2 class="text-3xl font-bold text-center mb-6">
+          Student Portal
+        </h2>
+
+        <!-- Form -->
+        <form class="space-y-5">
+
+          <!-- Email -->
+          <div>
+            <label class="label">
+              <span class="label-text font-medium">Student ID</span>
+            </label>
+            <input
+              type="number"
+              id="student-id"
+              placeholder="Enter Your Student ID"
+              value="221002154"
+              class="input input-bordered w-full"
+              required
+            />
+          </div>
+
+          <!-- Password -->
+          <div>
+            <label class="label">
+              <span class="label-text font-medium">Password</span>
+            </label>
+            <input
+              type="password"
+              id="password"
+              value="1234"
+              placeholder="Enter your password"
+              class="input input-bordered w-full"
+              required
+            />
+          </div>
+
+          <!-- Remember + Forgot -->
+          <div class="flex items-center justify-between text-sm">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" class="checkbox checkbox-primary" />
+              Remember me
+            </label>
+
+            <a href="#" class="text-primary hover:underline">
+              Forgot password?
+            </a>
+          </div>
+
+          <!-- Button -->
+          <button id="login-btn" class="btn btn-primary w-full mt-2">
+            Login
+          </button>
+
+        </form>
+
+        <!-- Signup -->
+        <p class="text-center text-sm mt-6">
+          Don't have an account?
+          <a href="#" class="text-primary font-medium hover:underline">
+            Sign Up
+          </a>
+        </p>
+
+      </div>
+    </div>
+<script src="./JS/login.js"></script>
+
+  </body>
+</html>

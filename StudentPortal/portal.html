@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+
+    <!-- DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen">
+
+  <!-- Navbar -->
+  <div class="navbar bg-primary text-white px-6">
+    <div class="flex-1">
+      <a class="text-xl font-bold">Student Portal</a>
+    </div>
+    <div class="flex-none gap-4">
+      <span>Welcome, Monirul</span>
+      <a href="index.html" class="btn btn-sm btn-error">Logout</a>
+    </div>
+  </div>
+
+  <!-- ✅ Main Container (Everything inside this) -->
+  <div class="p-6 max-w-6xl mx-auto space-y-6">
+
+    <!-- Profile Section -->
+    <div class="card bg-white shadow-xl">
+      <div class="card-body">
+        <div class="flex justify-between items-center">
+          <h2 class="card-title text-xl">Student Profile</h2>
+          <button class="btn btn-primary btn-sm" id="update-information">
+            Update Information
+          </button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+          <p><strong>Student ID:</strong> <span id="student-id">221002154</span></p>
+          <p><strong>Department:</strong> <span id="department"> Computer Science & Engineering</span></p>
+          <p><strong>Semester:</strong> <span id="semester">6th</span></p>
+          <p><strong>Email:</strong> <span id="gmail">monirul@gmail.com</span></p>
+          <p><strong>Phone:</strong> 017XXXXXXXX</p>
+          <p><strong>Date of Birth:</strong> 12 March 2003</p>
+          <p><strong>Blood Group:</strong> B+</p>
+          <p><strong>Address:</strong> Dhaka, Bangladesh</p>
+          <p><strong>Guardian Name:</strong> Md. Karim</p>
+          <p><strong>Guardian Phone:</strong> 018XXXXXXXX</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Academic Summary -->
+    <div class="card bg-white shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Academic Summary</h2>
+        <p><strong>CGPA:</strong> <span id="cg">3.75</span></p>
+        <p><strong>Attendance:</strong> 87%</p>
+        <p><strong>Completed Credits:</strong> 108 / 132</p>
+        <p>
+          <strong>Fee Status:</strong>
+          <span class="text-green-600 font-semibold">Paid</span>
+        </p>
+
+        <progress
+          class="progress progress-primary w-full mt-3"
+          value="108"
+          max="132"
+        ></progress>
+      </div>
+    </div>
+
+    <!-- Subjects -->
+    <div class="card bg-white shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Current Semester Subjects</h2>
+        <div class="overflow-x-auto">
+          <table class="table table-zebra">
+            <thead>
+              <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+                <th>Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CSE401</td>
+                <td>Machine Learning</td>
+                <td id="ml">3</td>
+                <td><span id="mlg">3.5</span></td>
+              </tr>
+              <tr>
+                <td>CSE402</td>
+                <td>Computer Networks</td>
+                <td id="cn">3</td>
+                <td><span id="cng">3.5</span></td>
+              </tr>
+              <tr>
+                <td>CSE403</td>
+                <td>Compiler Design</td>
+                <td id="cd">3</td>
+                <td><span id="cdg" >3.25</span></td>
+              </tr>
+              <tr>
+                <td>CSE404</td>
+                <td >Software Engineering</td>
+                <td id="swe">3</td>
+                <td><span id="sweg">3</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notices -->
+    <div class="card bg-white shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Notices</h2>
+        <ul class="list-disc ml-6 text-sm space-y-1">
+          <li>Midterm exam starts from 25 February</li>
+          <li>Project submission deadline: 28 February</li>
+          <li>Next semester registration opens next week</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Upcoming Exams -->
+    <div class="card bg-white shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Upcoming Exams</h2>
+        <ul class="list-disc ml-6 text-sm space-y-1">
+          <li>Machine Learning - 25 Feb 2026</li>
+          <li>Computer Networks - 27 Feb 2026</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Assignments -->
+    <div class="card bg-white shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Assignments</h2>
+        <ul class="list-disc ml-6 text-sm space-y-1">
+          <li>ML Project (Due: 22 Feb 2026)</li>
+          <li>Network Report (Due: 24 Feb 2026)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+<script src="./JS/portal.js"></script>
+</body>
+
+</html>
