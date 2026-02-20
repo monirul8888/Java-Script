@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6</title>
+  </head>
+  <body>
+    <h1>Welcome To ES6</h1>
+    <h2>Map Function</h2>
+
+    <script>
+
+        const numbers = [ 2, 4, 4, 55, 1];
+        console.log("Numbers : ", numbers);
+
+        newNumbers = [];
+        for (let i = 0; i<numbers.length; i++){
+            let num = numbers[i]+1;
+            newNumbers.push(num);
+        }
+
+        console.log("Increase 1 = ", newNumbers);
+
+        const newNumbers1 = numbers.map(number=>{
+            return number+1;
+        })
+        console.log(newNumbers1);
+
+        const square = numbers.map(number=>{
+            return number*number;
+        })
+        console.log(square);
+
+
+    </script>
+  </body>
+</html>
