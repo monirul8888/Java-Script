@@ -1,5 +1,7 @@
 
 
+
+
 const loadData = () =>{
     
     fetch("https://jsonplaceholder.typicode.com/todos/1")
@@ -8,6 +10,13 @@ const loadData = () =>{
 
 
 }
+
+    fetch("https://jsonplaceholder.typicode.com/users")
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+
 
 
 const loadUser = () => {
@@ -30,6 +39,8 @@ const displayUser = (users) => {
         tr.innerHTML = `
             <td>${user.name}</td>
             <td>${user.email}</td>
+            <td>${user.company.name}</td>
+            
         `;
 
         tableBody.appendChild(tr);
