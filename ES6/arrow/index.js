@@ -9,3 +9,9 @@ console.log(add(10, 20));
 
 const add1 = sum1(20, 20);
 console.log("Add 1 = " , add1);
+
+
+const add2 = (a, b) =>{
+    return a+b;
+}
+console.log("Arrow Function ", add(100, 10));
