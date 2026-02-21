@@ -9,3 +9,5 @@ console.log("Person Object = ", person);
 newPerson = JSON.stringify(person);
 
 console.log("JSON File = ", newPerson);
+
+console.log("JSON type ", typeof newPerson);
