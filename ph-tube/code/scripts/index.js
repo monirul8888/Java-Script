@@ -51,25 +51,41 @@ const displayVideos = (videos) => {
     const videoContainer = document.getElementById("video-container");
 
     videos.forEach(video => {
-        console.log(video);
+        
 
         let videoCards = document.createElement("div");
 
         videoCards.innerHTML = `
-        <div class="card bg-base-100 shadow-sm">
-  <figure>
-    <img
-      src="${video.thumbnail}"
-      alt="Shoes" />
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">${video.title}</h2>
-    <p>${video.description}</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Buy Now</button>
-    </div>
+
+         <div class="card bg-base-100 ">
+          <figure class="relative">
+            <img class="w-full h-[200px] object-cover" src="${video.thumbnail}" alt="Shoes" />
+
+            <span class="absolute bottom-2 right-2 text-sm rounded text-white bg-black px-2">3Hrs 36mins ago</span>
+          </figure>
+
+          <div class=" flex gap-3 px-0 py-5">
+<div class="profile">
+
+              <div class="avatar">
+  <div class="w-12 rounded-full">
+    <img src="${video.authors[0].profile_picture}" />
   </div>
-</div>
+
+
+            </div>
+            
+
+
+            <div class="intro"></div>
+            <h2 class="text-sm font-semibold">${video.title}</h2>
+            <p class="text-sm text-gray-400 flex gap-1">${video.authors[0].profile_name}<img class="w-5 h-5" src="assets/check.png" alt=""></p>
+            <p class="text-sm text-gray-400 "">${video.others.views} Views</p>
+            
+          </div>
+        </div>
+        </div>
+
         `
         videoContainer.appendChild(videoCards);
     });
