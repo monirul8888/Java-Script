@@ -27,7 +27,7 @@ function items(categories) {
 
             const categoryDiv = document.createElement("div");
             categoryDiv.innerHTML = `
-            <button class="btn btn-sm">${cat.category}</button>
+            <button class="btn btn-sm hover:bg-[#FF1F3D] hover:text-white">${cat.category}</button>
             `
             categoryContainer.appendChild(categoryDiv);
 
