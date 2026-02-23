@@ -27,7 +27,7 @@ function items(categories) {
 
             const categoryDiv = document.createElement("div");
             categoryDiv.innerHTML = `
-            <button onclick="loadCategoriesVideos(${cat.category_id});" class="btn btn-sm hover:bg-[#FF1F3D] hover:text-white">${cat.category}</button>
+            <button id="btn-${cat.category_id}" onclick="loadCategoriesVideos(${cat.category_id});" class="btn btn-sm hover:bg-[#FF1F3D] hover:text-white">${cat.category}</button>
             `
             categoryContainer.appendChild(categoryDiv);
 
@@ -139,6 +139,9 @@ const loadCategoriesVideos = (id) =>{
     fetch(url)
     .then(res => res.json())
     .then (data => {
+        const clickedId = document.getElementById(`btn-${id}`)
+        console.log(clickedId);
+        clickedId.classList.add("active");
         displayVideos(data.category);
     })
 
