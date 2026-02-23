@@ -27,7 +27,7 @@ function items(categories) {
 
             const categoryDiv = document.createElement("div");
             categoryDiv.innerHTML = `
-            <button class="btn btn-sm hover:bg-[#FF1F3D] hover:text-white">${cat.category}</button>
+            <button onclick="loadCategoriesVideos(${cat.category_id});" class="btn btn-sm hover:bg-[#FF1F3D] hover:text-white">${cat.category}</button>
             `
             categoryContainer.appendChild(categoryDiv);
 
@@ -49,6 +49,8 @@ function loadVideos() {
 const displayVideos = (videos) => {
 
     const videoContainer = document.getElementById("video-container");
+
+    videoContainer.innerHTML = "";
 
     videos.forEach(video => {
         
@@ -93,7 +95,7 @@ const displayVideos = (videos) => {
 
 
 }
-loadVideos();
+
 
 
 
@@ -115,3 +117,19 @@ loadVideos();
 //     },
 //     "description": "'Midnight Serenade' by Noah Walker is a soulful journey into the depths of the night, capturing the mystique and allure of a moonlit evening. With 543K views, this song brings together tender melodies and evocative lyrics, making it a favorite among listeners seeking a contemplative yet uplifting experience. Immerse yourself in this musical masterpiece and feel the calm embrace of the night."
 // }
+
+
+const loadCategoriesVideos = (id) =>{
+
+
+
+    const url = `https://openapi.programming-hero.com/api/phero-tube/category/${id}`
+    console.log(url);
+
+    fetch(url)
+    .then(res => res.json())
+    .then (data => {
+        displayVideos(data.category);
+    })
+
+}
