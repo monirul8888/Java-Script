@@ -52,6 +52,16 @@ const displayVideos = (videos) => {
 
     videoContainer.innerHTML = "";
 
+    if (videos.length==0){
+        videoContainer.innerHTML = `
+          <div class=" py-20 col-span-full justify-center items-center flex flex-col text-center">
+        <img class="w-[120px]" src="assets/Icon.png" alt="">
+        <h2 class="text-2x1 font-bold">Opps. Sorry There is not Content Here</h2>
+      </div>`
+
+      return;
+    }
+
     videos.forEach(video => {
         
 
